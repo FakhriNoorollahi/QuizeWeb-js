@@ -1,0 +1,104 @@
+@import url("./globalStyles.css");
+
+.quize-page {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.questions__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  width: 1000px;
+  height: 250px;
+  gap: 1rem;
+}
+
+#question {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  overflow-wrap: break-word;
+  height: 30%;
+}
+
+#answers {
+  display: grid;
+  grid-template-columns: repeat(2, 450px);
+  gap: 1.5rem;
+  height: 50%;
+}
+
+#answers button {
+  gap: 0.7rem;
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+  text-align: start;
+  font-size: 0.9em;
+  overflow-wrap: break-word;
+  transition: all 0.3s ease-in;
+  border: 1px solid var(--blue-color);
+}
+
+#answers button:hover {
+  outline: 1px solid var(--blue-color);
+  outline-offset: -5px;
+  border: 0;
+}
+
+#answers button:disabled,
+#answers button[disabled] {
+  color: var(--grayColor-text);
+  background-color: var(--grayColor-background);
+  cursor: not-allowed;
+  border: 0;
+  outline: 0;
+}
+
+#answers button.corretAnswer {
+  background-color: var(--green-color);
+  font-weight: 600;
+  color: #000;
+}
+
+#answers button.inCorrectAnswer {
+  background-color: var(--red-color);
+}
+
+.buttons {
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+}
+
+.buttons button {
+  width: 100px;
+  padding: 0.5rem 1rem;
+  border-radius: 1.2rem;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.loader {
+  width: fit-content;
+  font-weight: bolder;
+  font-size: 60px;
+  background-image: var(--gradient-textH1);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  clip-path: inset(0 7rem 0 0);
+  letter-spacing: 2px;
+  animation: loading 1s infinite;
+}
+.loader:before {
+  content: "Loading...";
+}
+@keyframes loading {
+  to {
+    clip-path: inset(0 -1rem 0 0);
+  }
+}

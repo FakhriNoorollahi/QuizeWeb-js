@@ -1,0 +1,32 @@
+@import url("./globalStyles.css");
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3.7rem;
+  background-image: var(--gradient-textH1);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-right: 1rem;
+}
+
+.title span {
+  font-size: 3rem;
+}
+
+.buttons a {
+  padding: 1rem 1.5rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  color: #000;
+  background-image: var(--gradient-btn);
+  transition: all 0.3s ease-in;
+}
+
+.buttons a:hover {
+  background-image: var(--gradient-btnHover);
+  opacity: 0.9;
+}

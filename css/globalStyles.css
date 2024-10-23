@@ -1,0 +1,109 @@
+:root {
+  --blue-color: #2b60de;
+  --green-color: #90ee90;
+  --red-color: #ff7f7f;
+  --grayColor-text: #797777;
+  --grayColor-background: rgba(221, 219, 219, 0.3);
+  --gradient-body: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  --gradient-btn: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
+  --gradient-btnHover: linear-gradient(to top, #c0d1f0 0%, #8bb3e7 100%);
+  --gradient-textH1: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+  --boxShadow-button: 2px 2px 5px -2px rgba(7, 46, 80, 0.5),
+    -2px -2px 5px -2px rgba(7, 46, 80, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-image: var(--gradient-body);
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  background-color: unset;
+  outline: 0;
+  cursor: pointer;
+  box-shadow: var(--boxShadow-button);
+}
+
+input {
+  border: 0;
+  outline: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  padding: 3rem 0;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.buttons button {
+  background-image: var(--gradient-btn);
+  width: 250px;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+}
+
+.buttons button:hover,
+#home__btn:hover {
+  background-image: var(--gradient-btnHover);
+  opacity: 0.9;
+}
+
+.circle__box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: var(--gradient-body) padding-box,
+    var(--gradient-textH1) border-box;
+  border-radius: 50%;
+  border: 6px solid transparent;
+}
+
+#home__btn {
+  background-image: var(--gradient-btn);
+  padding: 0.7rem 1rem;
+  border-radius: 0.7rem;
+  width: 130px;
+  font-size: 1rem;
+  border-radius: 30px;
+}
+
+.message-box {
+  padding: 0.5rem 0.9rem;
+  font-size: 1rem;
+  position: absolute;
+  border-radius: 0.5rem;
+  background-color: var(--green-color);
+  top: 1.5rem;
+  opacity: 0;
+  transition: opacity 2s ease;
+}
